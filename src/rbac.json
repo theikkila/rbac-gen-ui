@@ -1,0 +1,346 @@
+{
+  "resources": {
+    "pods": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Pods API related operations, such as launching, getting state, listing or updating pods",
+      "name": "Pod",
+      "plural": "Pods",
+      "group":"",
+      "notes": "Allowing to create pods is a powerful permission, if user can create pod it can mount also a volume or for example secrets from the same namespace"
+    },
+    "pods/attach": {
+      "allowed_verbs": ["attach"],
+      "description": "Allowing to attach Pod standard streams (stdin, stdout, stderr)",
+      "name": "pod attachment",
+      "plural": "pod attachments",
+      "group":""
+    },
+    "pods/exec": {
+      "allowed_verbs": ["allow"],
+      "description": "Executing commands inside Pod",
+      "name": "Pod",
+      "plural": "Pods",
+      "group":""
+    },
+    "pods/portforward": {
+      "allowed_verbs": ["allow"],
+      "description": "Forwarding arbitrary port of Pod",
+      "name": "Pod",
+      "plural": "Pods",
+      "group":""
+    },
+    "pods/proxy": {
+      "allowed_verbs": ["allow"],
+      "description": "Allowing to use apiproxy for accessing this pod",
+      "name": "Pod",
+      "plural": "Pods",
+      "group":""
+    },
+    "configmaps": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Configmaps related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Configmap",
+      "plural": "Configmaps",
+      "group":"",
+      "notes": ""
+    },
+    "endpoints": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Endpoints related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Endpoint",
+      "plural": "Endpoints",
+      "group":"",
+      "notes": ""
+    },
+    "persistentvolumeclaims": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "PersistentVolumeClaims related operations, such as creating, reading, listing, deleting or updating",
+      "name": "PersistentVolumeClaim",
+      "plural": "PersistentVolumeClaims",
+      "group":"",
+      "notes": ""
+    },
+    "replicationcontrollers": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "ReplicationController related operations, such as creating, reading, listing, deleting or updating",
+      "name": "ReplicationController",
+      "plural": "ReplicationControllers",
+      "group":"",
+      "notes": ""
+    },
+    "replicationcontrollers/scale": {
+      "allowed_verbs": ["update"],
+      "description": "Allowing to scale replicationcontrollers",
+      "name": "ReplicationController",
+      "plural": "ReplicationControllers",
+      "group":""
+    },
+    "secrets": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Secret related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Secret",
+      "plural": "Secrets",
+      "group":"",
+      "notes": ""
+    },
+    "serviceaccounts": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch","impersonate"],
+      "description": "Serviceaccount related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Serviceaccount",
+      "plural": "Serviceaccounts",
+      "group":"",
+      "notes": ""
+    },
+    "services": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Service related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Service",
+      "plural": "Services",
+      "group":"",
+      "notes": ""
+    },
+    "services/proxy": {
+      "allowed_verbs": ["allow"],
+      "description": "Allowing to use apiproxy for accessing this service",
+      "name": "Service",
+      "plural": "Services",
+      "group":""
+    },
+    "bindings": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Role bingind related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Binding",
+      "plural": "Bindings",
+      "group":"",
+      "notes": "May allow privilege escalation if mutating privileges are enabled"
+    },
+    "events": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Event related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Event",
+      "plural": "Events",
+      "group":"",
+      "notes": ""
+    },
+    "limitranges": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Limitrange related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Limitrange",
+      "plural": "Limitranges",
+      "group":"",
+      "notes": ""
+    },
+    "namespaces/status": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Namespace status related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Namespace/status",
+      "plural": "Namespace/status",
+      "group":"",
+      "notes": ""
+    },
+    "pods/log": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Pod logs related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Pod logs",
+      "plural": "Pod logs",
+      "group":"",
+      "notes": ""
+    },
+    "pods/status": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Pod status related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Pod status",
+      "plural": "Pod status",
+      "group":"",
+      "notes": ""
+    },
+    "replicationcontrollers/status": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "ReplicationController status related operations, such as creating, reading, listing, deleting or updating",
+      "name": "ReplicationController status",
+      "plural": "ReplicationController status",
+      "group":"",
+      "notes": ""
+    },
+    "resourcequotas": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Resource Quota related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Resource Quota",
+      "plural": "Resource Quotas",
+      "group":"",
+      "notes": ""
+    },
+    "resourcequotas/status": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Resource Quota status related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Resource Quota status",
+      "plural": "Resource Quota status",
+      "group":"",
+      "notes": ""
+    },
+    "namespaces": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Namespace related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Namespace",
+      "plural": "Namespaces",
+      "group":"",
+      "notes": ""
+    },
+    "statefulsets": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "Statefulset related operations, such as creating, reading, listing, deleting or updating",
+      "name": "Statefulset",
+      "plural": "Statefulsets",
+      "group":"apps",
+      "notes": ""
+    },
+    "horizontalpodautoscalers": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "horizontalpodautoscaler related operations, such as creating, reading, listing, deleting or updating",
+      "name": "horizontalpodautoscaler",
+      "plural": "horizontalpodautoscalers",
+      "group":"autoscaling",
+      "notes": ""
+    },
+    "cronjobs": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "cronjob related operations, such as creating, reading, listing, deleting or updating",
+      "name": "cronjob",
+      "plural": "cronjobs",
+      "group":"batch",
+      "notes": ""
+    },
+    "job": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "job related operations, such as creating, reading, listing, deleting or updating",
+      "name": "job",
+      "plural": "jobs",
+      "group":"batch",
+      "notes": ""
+    },
+    "scheduledjobs": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "scheduledjob related operations, such as creating, reading, listing, deleting or updating",
+      "name": "scheduledjob",
+      "plural": "scheduledjobs",
+      "group":"batch",
+      "notes": ""
+    },
+    "daemonsets": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "daemonset related operations, such as creating, reading, listing, deleting or updating",
+      "name": "daemonset",
+      "plural": "daemonsets",
+      "group":"extensions",
+      "notes": ""
+    },
+    "deployments": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "deployment related operations, such as creating, reading, listing, deleting or updating",
+      "name": "deployment",
+      "plural": "deployments",
+      "group":"extensions",
+      "notes": ""
+    },
+    "deployments/scale": {
+      "allowed_verbs": ["allow"],
+      "description": "deployment scaling related operations, such as creating, reading, listing, deleting or updating",
+      "name": "deployment scaling",
+      "plural": "deployment scalings",
+      "group":"extensions",
+      "notes": ""
+    },
+    "ingresses": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "ingress related operations, such as creating, reading, listing, deleting or updating",
+      "name": "ingress",
+      "plural": "ingresses",
+      "group":"extensions",
+      "notes": ""
+    },
+    "replicasets": {
+      "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
+      "description": "replicaset related operations, such as creating, reading, listing, deleting or updating",
+      "name": "replicaset",
+      "plural": "replicasets",
+      "group":"extensions",
+      "notes": ""
+    },
+    "replicasets/scale": {
+      "allowed_verbs": ["update"],
+      "description": "replicaset scaling related operations, such as creating, reading, listing, deleting or updating",
+      "name": "replicaset scaling",
+      "plural": "replicaset scalings",
+      "group":"extensions",
+      "notes": ""
+    }
+  },
+  "verb_presets": {
+    "read": ["get", "list", "watch"],
+    "read_write": ["get", "list", "watch", "create", "update", "patch", "delete", "deletecollection"]
+  },
+  "verbs": {
+    "allow": {
+      "action": "to run execute this operation",
+      "type": "single",
+      "read_only": false,
+      "dangerous": true,
+      "virtual": true,
+      "verb": "create"
+    },
+    "get": {
+      "action": "to get single",
+      "type": "single",
+      "read_only": true,
+      "dangerous": false
+    },
+    "list": {
+      "action": "to get list of",
+      "type": "collection",
+      "read_only": true,
+      "dangerous": false
+    },
+    "impersonate": {
+      "action": "impersonate",
+      "type": "single",
+      "read_only": false,
+      "dangerous": true
+    },
+    "watch": {
+      "action": "to watch changes of",
+      "type": "single",
+      "read_only": true,
+      "dangerous": false
+    },
+    "create": {
+      "action": "to create",
+      "type": "single",
+      "read_only": false,
+      "dangerous": false
+    },
+    "patch": {
+      "action": "to patch",
+      "type": "single",
+      "read_only": false,
+      "dangerous": true
+    },
+    "update": {
+      "action": "to update",
+      "type": "single",
+      "read_only": false,
+      "dangerous": true
+    },
+    "delete": {
+      "action": "to destroy",
+      "type": "single",
+      "read_only": false,
+      "dangerous": true
+    },
+    "deletecollection": {
+      "action": "to destroy a collection of",
+      "type": "collection",
+      "read_only": false,
+      "dangerous": true
+    }
+  }
+}
