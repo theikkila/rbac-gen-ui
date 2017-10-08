@@ -9,36 +9,36 @@
       "notes": "Allowing to create pods is a powerful permission, if user can create pod it can mount also a volume or for example secrets from the same namespace"
     },
     "pods/attach": {
-      "allowed_verbs": ["attach"],
+      "allowed_verbs": ["allow"],
       "description": "Allowing to attach Pod standard streams (stdin, stdout, stderr)",
-      "name": "pod attachment",
-      "plural": "pod attachments",
+      "name": "attach Pod",
+      "plural": "attach Pods",
       "group":""
     },
     "pods/exec": {
       "allowed_verbs": ["allow"],
       "description": "Executing commands inside Pod",
-      "name": "Pod",
-      "plural": "Pods",
+      "name": "execute commands inside Pod",
+      "plural": "execute commands inside Pods",
       "group":""
     },
     "pods/portforward": {
       "allowed_verbs": ["allow"],
       "description": "Forwarding arbitrary port of Pod",
-      "name": "Pod",
-      "plural": "Pods",
+      "name": "forward port to Pod",
+      "plural": "forward ports to Pods",
       "group":""
     },
     "pods/proxy": {
       "allowed_verbs": ["allow"],
       "description": "Allowing to use apiproxy for accessing this pod",
-      "name": "Pod",
-      "plural": "Pods",
+      "name": "use apiproxy for Pod",
+      "plural": "use apiproxy for Pods",
       "group":""
     },
     "configmaps": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Configmaps related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Configmaps related operations",
       "name": "Configmap",
       "plural": "Configmaps",
       "group":"",
@@ -46,7 +46,7 @@
     },
     "endpoints": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Endpoints related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Endpoints related operations",
       "name": "Endpoint",
       "plural": "Endpoints",
       "group":"",
@@ -54,7 +54,7 @@
     },
     "persistentvolumeclaims": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "PersistentVolumeClaims related operations, such as creating, reading, listing, deleting or updating",
+      "description": "PersistentVolumeClaims related operations",
       "name": "PersistentVolumeClaim",
       "plural": "PersistentVolumeClaims",
       "group":"",
@@ -62,7 +62,7 @@
     },
     "replicationcontrollers": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "ReplicationController related operations, such as creating, reading, listing, deleting or updating",
+      "description": "ReplicationController related operations",
       "name": "ReplicationController",
       "plural": "ReplicationControllers",
       "group":"",
@@ -77,7 +77,7 @@
     },
     "secrets": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Secret related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Secret related operations",
       "name": "Secret",
       "plural": "Secrets",
       "group":"",
@@ -85,7 +85,7 @@
     },
     "serviceaccounts": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch","impersonate"],
-      "description": "Serviceaccount related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Serviceaccount related operations",
       "name": "Serviceaccount",
       "plural": "Serviceaccounts",
       "group":"",
@@ -93,7 +93,7 @@
     },
     "services": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Service related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Service related operations",
       "name": "Service",
       "plural": "Services",
       "group":"",
@@ -108,7 +108,7 @@
     },
     "bindings": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Role bingind related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Role bingind related operations",
       "name": "Binding",
       "plural": "Bindings",
       "group":"",
@@ -116,7 +116,7 @@
     },
     "events": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Event related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Event related operations",
       "name": "Event",
       "plural": "Events",
       "group":"",
@@ -124,7 +124,7 @@
     },
     "limitranges": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Limitrange related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Limitrange related operations",
       "name": "Limitrange",
       "plural": "Limitranges",
       "group":"",
@@ -132,7 +132,7 @@
     },
     "namespaces/status": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Namespace status related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Namespace status related operations",
       "name": "Namespace/status",
       "plural": "Namespace/status",
       "group":"",
@@ -140,7 +140,7 @@
     },
     "pods/log": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Pod logs related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Pod logs related operations",
       "name": "Pod logs",
       "plural": "Pod logs",
       "group":"",
@@ -148,7 +148,7 @@
     },
     "pods/status": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Pod status related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Pod status related operations",
       "name": "Pod status",
       "plural": "Pod status",
       "group":"",
@@ -156,7 +156,7 @@
     },
     "replicationcontrollers/status": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "ReplicationController status related operations, such as creating, reading, listing, deleting or updating",
+      "description": "ReplicationController status related operations",
       "name": "ReplicationController status",
       "plural": "ReplicationController status",
       "group":"",
@@ -164,7 +164,7 @@
     },
     "resourcequotas": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Resource Quota related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Resource Quota related operations",
       "name": "Resource Quota",
       "plural": "Resource Quotas",
       "group":"",
@@ -172,7 +172,7 @@
     },
     "resourcequotas/status": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Resource Quota status related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Resource Quota status related operations",
       "name": "Resource Quota status",
       "plural": "Resource Quota status",
       "group":"",
@@ -180,7 +180,7 @@
     },
     "namespaces": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Namespace related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Namespace related operations",
       "name": "Namespace",
       "plural": "Namespaces",
       "group":"",
@@ -188,7 +188,7 @@
     },
     "statefulsets": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "Statefulset related operations, such as creating, reading, listing, deleting or updating",
+      "description": "Statefulset related operations",
       "name": "Statefulset",
       "plural": "Statefulsets",
       "group":"apps",
@@ -196,7 +196,7 @@
     },
     "horizontalpodautoscalers": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "horizontalpodautoscaler related operations, such as creating, reading, listing, deleting or updating",
+      "description": "horizontalpodautoscaler related operations",
       "name": "horizontalpodautoscaler",
       "plural": "horizontalpodautoscalers",
       "group":"autoscaling",
@@ -204,7 +204,7 @@
     },
     "cronjobs": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "cronjob related operations, such as creating, reading, listing, deleting or updating",
+      "description": "cronjob related operations",
       "name": "cronjob",
       "plural": "cronjobs",
       "group":"batch",
@@ -212,7 +212,7 @@
     },
     "job": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "job related operations, such as creating, reading, listing, deleting or updating",
+      "description": "job related operations",
       "name": "job",
       "plural": "jobs",
       "group":"batch",
@@ -220,7 +220,7 @@
     },
     "scheduledjobs": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "scheduledjob related operations, such as creating, reading, listing, deleting or updating",
+      "description": "scheduledjob related operations",
       "name": "scheduledjob",
       "plural": "scheduledjobs",
       "group":"batch",
@@ -228,7 +228,7 @@
     },
     "daemonsets": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "daemonset related operations, such as creating, reading, listing, deleting or updating",
+      "description": "daemonset related operations",
       "name": "daemonset",
       "plural": "daemonsets",
       "group":"extensions",
@@ -236,7 +236,7 @@
     },
     "deployments": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "deployment related operations, such as creating, reading, listing, deleting or updating",
+      "description": "deployment related operations",
       "name": "deployment",
       "plural": "deployments",
       "group":"extensions",
@@ -244,7 +244,7 @@
     },
     "deployments/scale": {
       "allowed_verbs": ["allow"],
-      "description": "deployment scaling related operations, such as creating, reading, listing, deleting or updating",
+      "description": "deployment scaling related operations",
       "name": "deployment scaling",
       "plural": "deployment scalings",
       "group":"extensions",
@@ -252,7 +252,7 @@
     },
     "ingresses": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "ingress related operations, such as creating, reading, listing, deleting or updating",
+      "description": "ingress related operations",
       "name": "ingress",
       "plural": "ingresses",
       "group":"extensions",
@@ -260,7 +260,7 @@
     },
     "replicasets": {
       "allowed_verbs": ["create", "delete","deletecollection","get","list","patch","update","watch"],
-      "description": "replicaset related operations, such as creating, reading, listing, deleting or updating",
+      "description": "replicaset related operations",
       "name": "replicaset",
       "plural": "replicasets",
       "group":"extensions",
@@ -268,7 +268,7 @@
     },
     "replicasets/scale": {
       "allowed_verbs": ["update"],
-      "description": "replicaset scaling related operations, such as creating, reading, listing, deleting or updating",
+      "description": "replicaset scaling related operations",
       "name": "replicaset scaling",
       "plural": "replicaset scalings",
       "group":"extensions",
@@ -281,7 +281,7 @@
   },
   "verbs": {
     "allow": {
-      "action": "to run execute this operation",
+      "action": "to",
       "type": "single",
       "read_only": false,
       "dangerous": true,
